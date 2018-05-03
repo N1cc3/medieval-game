@@ -13,4 +13,9 @@ class AppTests {
 	fun contextLoads() {
 	}
 
+	@Test
+	fun mainTest() {
+		App().main(arrayOf())
+	}
+
 }
