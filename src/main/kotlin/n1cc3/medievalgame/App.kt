@@ -4,16 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class App {
-
-    companion object {
-        fun main(args: Array<String>) {
-            runApplication<App>(*args)
-        }
-    }
-
-}
+class App
 
 fun main(args: Array<String>) {
-    App.main(args)
+    runApplication<App>(*args)
 }
