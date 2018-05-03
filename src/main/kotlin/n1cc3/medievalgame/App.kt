@@ -6,9 +6,14 @@ import org.springframework.boot.runApplication
 @SpringBootApplication
 class App {
 
-    fun main(args: Array<String>) {
-        runApplication<App>(*args)
+    companion object {
+        fun main(args: Array<String>) {
+            runApplication<App>(*args)
+        }
     }
 
 }
 
+fun main(args: Array<String>) {
+    App.main(args)
+}

@@ -15,7 +15,7 @@ class AppTests {
 
 	@Test
 	fun mainTest() {
-		App().main(arrayOf())
+		App.main(arrayOf())
 	}
 
 }
