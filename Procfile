@@ -1,1 +1,1 @@
-web: java -jar launcher/build/libs/launcher-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar launcher/build/libs/launcher-0.0.1-SNAPSHOT.jar
