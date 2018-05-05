@@ -1,1 +1,3 @@
 rootProject.name = 'medievalgame'
+include 'modules/hexgrid'
+
