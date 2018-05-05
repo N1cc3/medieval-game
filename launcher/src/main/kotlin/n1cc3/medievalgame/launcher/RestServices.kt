@@ -9,18 +9,18 @@ import java.util.concurrent.atomic.AtomicLong
 @RestController
 class RestServices {
 
-    val counter = AtomicLong()
+	val counter = AtomicLong()
 
-    @GetMapping("/")
-    fun hello(@RequestParam(value = "name", defaultValue = "World") name: String) =
-            Hello(counter.incrementAndGet(), "Hello, $name")
+	@GetMapping("/")
+	fun hello(@RequestParam(value = "name", defaultValue = "World") name: String) =
+		Hello(counter.incrementAndGet(), "Hello, $name")
 
 
-    @Autowired
-    lateinit var helloService: HelloService
+	@Autowired
+	lateinit var helloService: HelloService
 
-    @GetMapping("/service")
-    fun helloService() = helloService.getHello()
+	@GetMapping("/service")
+	fun helloService() = helloService.getHello()
 
 }
 

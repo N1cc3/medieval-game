@@ -4,6 +4,6 @@ import org.springframework.stereotype.Service
 
 @Service
 class HelloService {
-    fun getHello() = "HelloService here!"
+	fun getHello() = "HelloService here!"
 }
 

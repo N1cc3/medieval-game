@@ -14,27 +14,27 @@ import org.springframework.test.context.junit4.SpringRunner
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class HelloRestTest {
 
-    @Autowired
-    lateinit var testRestTemplate: TestRestTemplate
+	@Autowired
+	lateinit var testRestTemplate: TestRestTemplate
 
-    @Test
-    fun testHelloDto() {
-        val result1 = testRestTemplate.getForEntity("/", Hello::class.java)
-        assertNotNull(result1)
-        assertEquals(result1.statusCode, HttpStatus.OK)
-        assertEquals(result1.body, Hello(1,"Hello, World"))
+	@Test
+	fun testHelloDto() {
+		val result1 = testRestTemplate.getForEntity("/", Hello::class.java)
+		assertNotNull(result1)
+		assertEquals(result1.statusCode, HttpStatus.OK)
+		assertEquals(result1.body, Hello(1, "Hello, World"))
 
-        val result2 = testRestTemplate.getForEntity("/?name=asd", Hello::class.java)
-        assertNotNull(result2)
-        assertEquals(result2.statusCode, HttpStatus.OK)
-        assertEquals(result2.body, Hello(2,"Hello, asd"))
-    }
+		val result2 = testRestTemplate.getForEntity("/?name=asd", Hello::class.java)
+		assertNotNull(result2)
+		assertEquals(result2.statusCode, HttpStatus.OK)
+		assertEquals(result2.body, Hello(2, "Hello, asd"))
+	}
 
-    @Test
-    fun testHelloService() {
-        val result = testRestTemplate.getForEntity("/service", String::class.java)
-        assertNotNull(result)
-        assertEquals(result.statusCode, HttpStatus.OK)
-        assertEquals(result.body, "HelloService here!")
-    }
+	@Test
+	fun testHelloService() {
+		val result = testRestTemplate.getForEntity("/service", String::class.java)
+		assertNotNull(result)
+		assertEquals(result.statusCode, HttpStatus.OK)
+		assertEquals(result.body, "HelloService here!")
+	}
 }

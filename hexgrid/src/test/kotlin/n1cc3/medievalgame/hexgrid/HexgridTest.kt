@@ -16,22 +16,22 @@ import org.springframework.test.context.junit4.SpringRunner
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class HexgridTest {
 
-    @Autowired
-    lateinit var api: TestRestTemplate
+	@Autowired
+	lateinit var api: TestRestTemplate
 
-    @Test
-    fun testDistance() {
-        val result1 = api.getForObject<Int>("/hexgrid/distance/0/0/0/0")
-        assertNotNull(result1)
-        assertEquals(result1, 0)
+	@Test
+	fun testDistance() {
+		val result1 = api.getForObject<Int>("/hexgrid/distance/0/0/0/0")
+		assertNotNull(result1)
+		assertEquals(result1, 0)
 
-	    val result2 = api.getForObject<Int>("/hexgrid/distance/0/0/10/10")
-	    assertNotNull(result2)
-	    assertEquals(result2, 30)
+		val result2 = api.getForObject<Int>("/hexgrid/distance/0/0/10/10")
+		assertNotNull(result2)
+		assertEquals(result2, 30)
 
-	    val result3 = api.getForObject<Int>("/hexgrid/distance/0/0/-10/-10")
-	    assertNotNull(result3)
-	    assertEquals(result3, 30)
-    }
+		val result3 = api.getForObject<Int>("/hexgrid/distance/0/0/-10/-10")
+		assertNotNull(result3)
+		assertEquals(result3, 30)
+	}
 
 }

@@ -23,7 +23,7 @@ class Cube(val x: Int, val y: Int, val z: Int) {
 	}
 
 	fun toHex(): Hex {
-		val col = x + (z - (z % 1)) / 2
+		val col = x + (z - (z % 2)) / 2
 		val row = z
 		return Hex(col, row)
 	}

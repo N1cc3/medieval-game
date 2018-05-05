@@ -5,7 +5,7 @@ package n1cc3.medievalgame.hexgrid
  */
 class Hex(val x: Int, val y: Int) {
 
-	private val parity: Int = y % 1
+	private val parity: Int = y % 2
 
 	/**
 	 * Returns the immediate neighbor [Hex]es.
@@ -31,7 +31,7 @@ class Hex(val x: Int, val y: Int) {
 	fun isInside(maxX: Int, maxY: Int): Boolean = this.x in 0..(maxX - 1) && this.y in 0..(maxY - 1)
 
 	private fun toCube(): Cube {
-		val cx = x - (y - (y % 1)) / 2
+		val cx = x - (y - (y % 2)) / 2
 		val cz = y
 		val cy = -x - cz
 		return Cube(cx, cy, cz)
@@ -55,20 +55,20 @@ class Hex(val x: Int, val y: Int) {
 
 	companion object {
 		private val evenDirections = arrayOf(
-				Hex(1, 0),
-				Hex(0, -1),
-				Hex(-1, -1),
-				Hex(-1, 0),
-				Hex(-1, 1),
-				Hex(0, 1)
+			Hex(1, 0),
+			Hex(0, -1),
+			Hex(-1, -1),
+			Hex(-1, 0),
+			Hex(-1, 1),
+			Hex(0, 1)
 		)
 		private val oddDirections = arrayOf(
-				Hex(1, 0),
-				Hex(1, -1),
-				Hex(0, -1),
-				Hex(-1, 0),
-				Hex(0, 1),
-				Hex(1, 1)
+			Hex(1, 0),
+			Hex(1, -1),
+			Hex(0, -1),
+			Hex(-1, 0),
+			Hex(0, 1),
+			Hex(1, 1)
 		)
 		private val directions = arrayOf(evenDirections, oddDirections)
 	}
