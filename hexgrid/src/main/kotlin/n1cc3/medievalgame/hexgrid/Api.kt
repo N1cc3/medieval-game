@@ -1,12 +1,10 @@
 package n1cc3.medievalgame.hexgrid
 
-import org.springframework.boot.SpringBootConfiguration
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.bind.annotation.PathVariable as Var
 
-@SpringBootConfiguration
 @RestController
 @RequestMapping(value = ["/hexgrid"])
 class Api {

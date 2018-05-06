@@ -9,7 +9,7 @@ import kotlin.math.min
  */
 class Cube(val x: Int, val y: Int, val z: Int) {
 
-	fun distanceTo(c: Cube): Int = abs(x - c.x) + abs(y - c.y) + abs(z - c.z) / 2
+	fun distanceTo(c: Cube): Int = (abs(x - c.x) + abs(y - c.y) + abs(z - c.z)) / 2
 
 	fun neighborsWithin(range: Int): List<Cube> {
 		var results = emptyList<Cube>()
