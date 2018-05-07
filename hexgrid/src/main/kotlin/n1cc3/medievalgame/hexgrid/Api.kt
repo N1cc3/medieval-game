@@ -18,5 +18,3 @@ class Api {
 	) = Hex(x1, y1).distanceTo(Hex(x2, y2))
 
 }
-
-
