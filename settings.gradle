@@ -2,3 +2,5 @@ rootProject.name = 'medievalgame'
 
 include 'launcher'
 include 'hexgrid'
+include 'terrain'
+
