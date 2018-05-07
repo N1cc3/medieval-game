@@ -16,7 +16,7 @@ class HexgridTest {
 	private lateinit var mockMvc: MockMvc
 
 	@InjectMocks
-	lateinit var api: Api
+	private lateinit var api: Api
 
 	@Before
 	fun setup() {
