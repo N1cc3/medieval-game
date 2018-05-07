@@ -17,7 +17,7 @@ apply plugin: 'kotlin'
 apply plugin: 'kotlin-spring'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'n1cc3'
+group = 'n1cc3.medievalgame'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
