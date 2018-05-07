@@ -3,7 +3,7 @@ package n1cc3.medievalgame.hexgrid
 /**
  * A single cell for a hexagonal grid system.
  */
-class Hex(val x: Int, val y: Int) {
+data class Hex(val x: Int, val y: Int) {
 
 	private val parity: Int = y % 2
 
@@ -40,18 +40,6 @@ class Hex(val x: Int, val y: Int) {
 	operator fun plus(that: Hex): Hex = Hex(this.x + that.x, this.y + that.y)
 
 	operator fun minus(that: Hex): Hex = Hex(this.x - that.x, this.y - that.y)
-
-	override fun toString(): String = "Hex($x, $y)"
-
-	override fun equals(other: Any?): Boolean {
-		return other is Hex && this.x == other.x && this.y == other.y
-	}
-
-	override fun hashCode(): Int {
-		var result = x
-		result = 31 * result + y
-		return result
-	}
 
 	companion object {
 		private val evenDirections = arrayOf(
