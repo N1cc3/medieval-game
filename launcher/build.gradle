@@ -45,7 +45,7 @@ repositories {
 }
 
 dependencies {
-	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile project(':hexgrid')
