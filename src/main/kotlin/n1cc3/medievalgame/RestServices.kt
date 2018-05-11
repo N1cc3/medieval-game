@@ -1,4 +1,4 @@
-package n1cc3.medievalgame.launcher
+package n1cc3.medievalgame
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping

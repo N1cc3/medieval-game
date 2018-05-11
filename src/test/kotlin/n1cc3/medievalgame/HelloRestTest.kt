@@ -1,4 +1,4 @@
-package n1cc3.medievalgame.launcher
+package n1cc3.medievalgame
 
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertNotNull
