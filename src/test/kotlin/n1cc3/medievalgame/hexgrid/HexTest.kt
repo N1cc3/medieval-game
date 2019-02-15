@@ -1,6 +1,7 @@
 package n1cc3.medievalgame.hexgrid
 
 import junit.framework.TestCase.assertEquals
+import n1cc3.medievalgame.entities.Hex
 import org.junit.Test
 
 class HexTest {

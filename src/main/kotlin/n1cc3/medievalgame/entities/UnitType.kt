@@ -1,4 +1,4 @@
-package n1cc3.medievalgame.units
+package n1cc3.medievalgame.entities
 
 data class UnitType (
 	val id: String,

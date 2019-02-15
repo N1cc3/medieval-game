@@ -1,5 +1,6 @@
 package n1cc3.medievalgame.units
 
+import n1cc3.medievalgame.entities.UnitType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

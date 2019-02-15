@@ -1,4 +1,4 @@
-package n1cc3.medievalgame.hexgrid
+package n1cc3.medievalgame.entities
 
 import kotlin.math.abs
 import kotlin.math.max
